@@ -1,0 +1,39 @@
+# PublicCTFProblems
+- Canary in a coal mine
+  - Stack canary
+- Exfiltrate
+  - Runs code you send it (with no stdout)
+- Functional Programming
+  - Ret2libc with leak
+- Get my got
+  - GOT overwrite
+- Jomp
+  - ROPchain
+- Jump
+  - Simple overflow
+- Leftovers
+  - Leftover stack data
+- Library
+  - Ret2libc with leak
+- Library harder
+  - Ret2libc
+- Messy UTF8
+  - Parsing exploit -> command injection
+- Overflow (foreverCTF)
+  - Overwrite number on stack
+- Overflow
+  - Simple buffer overflow
+- Params
+  - Calling conventions + simple overflow
+- Resolve
+  - Ret2dlresolve exploit
+- ROP
+  - Ropchain
+- Shell
+  - Shellcode with blacklisted characters
+- Shelly sells sea shells
+  - Shellcode
+- Tricky indices
+  - Array negative indexing
+- Xor
+  - Buffer overflow with xor encoding
