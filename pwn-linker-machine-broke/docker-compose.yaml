@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  pwn-linker:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{linking_is_hard_work_kiddo38934208}"
+        USER: "linker"
+    ports:
+      - "5433:9000"
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          cpus: 0.2
+          memory: 512M
+        reservations:
+          memory: 64M
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5

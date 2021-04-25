@@ -1,0 +1,32 @@
+_dl_fixup
+
+
+
+before _dl_lookup_symbol
+change undef_name to v2 fixes it
+set {char}($rdi+0xa) = '2'
+
+
+
+set undef_name = "get_flag_v2"
+set $rsi = 0x4f69eb45 # hash
+# ignoring ref for now, i think that is only used in check_match
+# ignoring current_value bc it is an out variable
+# ignoring scope as i think that should always be the same
+# ignore start bc we only have one library
+# ignore version bc we aren't using symbol versioning
+# ignore flags bc it is used in check_match only
+# let skip_map stay null
+# both are functions so type_class shouldn't change
+# undef map is just the same as *scope->r_list
+
+do_lookup_x
+
+i is the index in symtab we are currently looking at
+symtab and strtab dont changeo
+
+map represents a dynamic library?
+
+libc is the first, lib_v2 is the second
+
+by doing those two changes we get to check_match

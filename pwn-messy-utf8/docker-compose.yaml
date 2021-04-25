@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  pwn-messy-utf8:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{shouldve_had_error_conditions871234}"
+        USER: "messyutf8"
+    ports:
+      - "5434:9000"
+    read_only: true
+    deploy:
+      resources:
+        limits:
+          cpus: 0.2
+          memory: 512M
+        reservations:
+          memory: 64M
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
