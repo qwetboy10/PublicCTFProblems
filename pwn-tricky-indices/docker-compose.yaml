@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-tricky-indices:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{lul_no_bounds_checks8791342}"
+        USER: "trickyindices"
+    deploy:
+      replicas: 1
+    ports:
+      - "1301:9000"
+    read_only: true

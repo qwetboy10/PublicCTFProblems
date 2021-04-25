@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-canary:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{bird_goes_tweet9383489}"
+        USER: "canary"
+    deploy:
+      replicas: 1
+    ports:
+      - "1308:9000"
+    read_only: true

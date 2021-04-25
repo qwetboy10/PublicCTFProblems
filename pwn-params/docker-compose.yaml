@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-params:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{u_got_my_params!235407F7}"
+        USER: "params"
+    deploy:
+      replicas: 1
+    ports:
+      - "1304:9000"
+    read_only: true

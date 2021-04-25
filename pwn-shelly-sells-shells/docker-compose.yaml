@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-shelly-sells-shells:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{how_could_you_do_this32032508}"
+        USER: "shellysellsshells"
+    deploy:
+      replicas: 1
+    ports:
+      - "1305:9000"
+    read_only: true

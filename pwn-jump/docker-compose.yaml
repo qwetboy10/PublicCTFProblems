@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-jump:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{cool_cool_cool90820}"
+        USER: "jump"
+    deploy:
+      replicas: 1
+    ports:
+      - "1303:9000"
+    read_only: true

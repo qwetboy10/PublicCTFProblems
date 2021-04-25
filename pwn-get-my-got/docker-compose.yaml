@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pwn-get-my-got:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{i_have_been_got2398547}"
+        USER: "getmygot"
+    deploy:
+      replicas: 1
+    ports:
+      - "1307:9000"
+    read_only: true
