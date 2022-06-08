@@ -1,0 +1,13 @@
+version: "2.4"
+services:
+  pwn-shellcode:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{shell_my_shoes1298}"
+        USER: "shellcode"
+    cpus: '.1'
+    mem_limit: 150M
+    ports:
+      - "5500:9000"
+    read_only: true

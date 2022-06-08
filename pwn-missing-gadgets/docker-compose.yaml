@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  pwn-gadget:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{oops_jumped_to_middle}"
+        USER: "gadget"
+    ports:
+      - "5000:9000"
+    read_only: true

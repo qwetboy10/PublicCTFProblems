@@ -1,0 +1,15 @@
+name: "Shellcode"
+category: Binary Exploitation
+description: Don't waste your old, leftover shellcode. Give it to me and I can recycle it for you
+
+
+  By Tristan (@trab on discord)
+author: Tristan
+value: 500
+type: standard
+connection_info: nc ctf.isss.io 5500
+flags:
+  - utflag{shell_my_shoes1298}
+files:
+  - build/shellcode
+state: hidden

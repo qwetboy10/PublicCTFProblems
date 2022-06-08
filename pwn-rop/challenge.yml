@@ -1,0 +1,16 @@
+name: "ROP"
+category: Binary Exploitation
+description: |
+  ROP: Recycling oriented programming
+
+
+  By Tristan (@trab on discord)
+author: Tristan
+value: 700
+type: standard
+connection_info: nc ctf.isss.io 5501
+flags:
+  - utflag{o_no_o_no_o_no32513498}
+files:
+  - build/rop
+state: hidden

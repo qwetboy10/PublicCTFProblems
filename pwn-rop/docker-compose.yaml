@@ -1,13 +1,13 @@
-version: "3.8"
+version: "2.4"
 services:
   pwn-rop:
     build:
       context: .
       args: 
-        FLAG: "utflag{ropalicious!329084}"
+        FLAG: "utflag{o_no_o_no_o_no32513498}"
         USER: "rop"
-    deploy:
-      replicas: 1
+    cpus: '.1'
+    mem_limit: 150M
     ports:
-      - "1306:9000"
+      - "5501:9000"
     read_only: true

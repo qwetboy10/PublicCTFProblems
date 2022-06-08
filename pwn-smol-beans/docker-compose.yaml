@@ -1,0 +1,16 @@
+version: "3"
+services:
+  pwn-smol-beans:
+    build:
+      context: .
+      args: 
+        FLAG: "utflag{big_beans_smol_beans_printf_yay}"
+        USER: "smol_beans"
+    deploy:
+      resources:
+        limits:
+          cpus: '.1'
+          memory: 150M
+    ports:
+      - "5501:9000"
+    read_only: true
